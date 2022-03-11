@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_home_off.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_home_on.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/activity_main.xml" value="0.340625" />
       </map>
     </option>
