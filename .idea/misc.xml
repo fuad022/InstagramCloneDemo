@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_arrow_back.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_home_off.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_home_on.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/login_input.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/top_border_grey.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/activity_main.xml" value="0.340625" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/fragment_auth_account.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/fragment_auth_login.xml" value="0.33" />
       </map>
     </option>
   </component>
