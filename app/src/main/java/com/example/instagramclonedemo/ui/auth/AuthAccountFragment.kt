@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.instagramclonedemo.R
 import com.example.instagramclonedemo.databinding.FragmentAuthAccountBinding
 
@@ -15,8 +16,19 @@ class AuthAccountFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // init()
+        init()
         return binding.root
     }
 
+    private fun init() {
+        binding.loginBtn.setOnClickListener {
+            val action = AuthAccountFragmentDirections.actionAuthAccountFragmentToRootFragment()
+            findNavController().navigate(action)
+        }
+
+        binding.btn.setOnClickListener {
+            val action = AuthAccountFragmentDirections.actionAuthAccountFragmentToAuthLoginFragment()
+            findNavController().navigate(action)
+        }
+    }
 }
