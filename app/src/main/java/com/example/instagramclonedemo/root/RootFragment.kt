@@ -59,7 +59,7 @@ class RootFragment : Fragment() {
     }
 
     fun dpToPx(dp: Int): Int {
-        val r = context!!.resources
+        val r = requireContext().resources
         return TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP,
             dp.toFloat(),
