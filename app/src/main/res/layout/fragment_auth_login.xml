@@ -13,24 +13,6 @@
         android:background="@color/white"
         tools:context=".ui.auth.AuthLoginFragment">
 
-        <!--        <com.google.android.material.appbar.AppBarLayout-->
-        <!--            android:id="@+id/app_bar"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:background="@color/white"-->
-        <!--            app:elevation="0dp"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="parent">-->
-
-        <!--            <com.google.android.material.appbar.MaterialToolbar-->
-        <!--                android:id="@+id/toolbar"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                app:navigationIcon="@drawable/ic_arrow_back"-->
-        <!--                android:layout_height="?attr/actionBarSize"-->
-        <!--                android:minHeight="?attr/actionBarSize" />-->
-        <!--        </com.google.android.material.appbar.AppBarLayout>-->
-
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
