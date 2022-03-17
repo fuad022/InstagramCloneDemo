@@ -57,7 +57,7 @@ class RootFragment : Fragment() {
                 override fun onLoadCleared(placeholder: Drawable?) {}
             })
     }
-
+    //test_comment
     fun dpToPx(dp: Int): Int {
         val r = requireContext().resources
         return TypedValue.applyDimension(
