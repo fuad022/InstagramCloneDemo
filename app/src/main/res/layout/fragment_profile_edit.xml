@@ -84,6 +84,7 @@
             android:text="Change Profile Photo"
             android:textColor="@color/blue"
             android:textSize="13sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/profile_img"
             app:layout_constraintStart_toStartOf="@id/profile_img"
             app:layout_constraintTop_toBottomOf="@id/profile_img" />
@@ -132,15 +133,13 @@
             android:id="@+id/username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="33sp"
-            android:layout_marginEnd="20sp"
             android:hint="Username"
             android:paddingTop="5dp"
             android:paddingBottom="20dp"
             android:text="jacob_w"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/username_txt"
+            app:layout_constraintEnd_toEndOf="@id/name"
+            app:layout_constraintStart_toStartOf="@id/name"
             app:layout_constraintTop_toBottomOf="@id/name" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -159,14 +158,12 @@
             android:id="@+id/website"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="46sp"
-            android:layout_marginEnd="20sp"
             android:hint="Website"
             android:paddingTop="5dp"
             android:paddingBottom="20dp"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/website_txt"
+            app:layout_constraintEnd_toEndOf="@id/username"
+            app:layout_constraintStart_toStartOf="@id/username"
             app:layout_constraintTop_toBottomOf="@id/username" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -185,16 +182,117 @@
             android:id="@+id/bio"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="79sp"
-            android:layout_marginEnd="20sp"
             android:hint="Bio"
             android:paddingTop="5dp"
             android:paddingBottom="20dp"
             android:text="Digital digital digital digital digital digital digital digital digital digital digital digital"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/bio_txt"
+            app:layout_constraintEnd_toEndOf="@id/website"
+            app:layout_constraintStart_toStartOf="@id/website"
             app:layout_constraintTop_toBottomOf="@id/website" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/switch_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Switch to Professional Account"
+            android:textColor="@color/blue"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bio" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/private_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Private Information"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch_txt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/email_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/private_txt" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20sp"
+            android:hint="Name"
+            android:paddingBottom="20dp"
+            android:text="jacob.west@gmail.com"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/email_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/email_txt"
+            app:layout_constraintTop_toTopOf="@id/email_txt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/phone_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Phone"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_txt" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:paddingTop="5dp"
+            android:paddingBottom="20dp"
+            android:text="+1 202 555 0147"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/email"
+            app:layout_constraintStart_toStartOf="@id/email"
+            app:layout_constraintTop_toBottomOf="@id/email" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/gender_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Gender"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone_txt" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Male"
+            android:paddingTop="5dp"
+            android:paddingBottom="20dp"
+            android:text="Male"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/phone"
+            app:layout_constraintStart_toStartOf="@id/phone"
+            app:layout_constraintTop_toBottomOf="@id/phone" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
