@@ -6,10 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.instagramclonedemo.R
-import com.example.instagramclonedemo.databinding.FragmentProfileBinding
+import com.example.instagramclonedemo.databinding.FragmentGridBinding
 
-class ProfileFragment : Fragment() {
-    private val binding by lazy { FragmentProfileBinding.inflate(layoutInflater) }
+class GridFragment : Fragment() {
+    private val binding by lazy { FragmentGridBinding.inflate(layoutInflater) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -18,4 +18,13 @@ class ProfileFragment : Fragment() {
         // init()
         return binding.root
     }
+
+    /*
+        private fun init() {
+        viewModel.mockDataList.observe(viewLifecycleOwner) {
+            notificationAdapter.submitList(it.toMutableList())
+        }
+        binding.followingRv.adapter = notificationAdapter
+    }
+     */
 }

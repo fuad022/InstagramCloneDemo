@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_img_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Circle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="joshua_l"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/profile_img"
+            app:layout_constraintTop_toTopOf="@id/profile_img" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tokyo, Japan"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/username"
+            app:layout_constraintTop_toBottomOf="@id/username" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:src="@drawable/ic_horiz_dots"
+            app:layout_constraintBottom_toTopOf="@id/post_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/post_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/vertical_img_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_img" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_like_off"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_img" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_comment"
+            app:layout_constraintBottom_toBottomOf="@id/like"
+            app:layout_constraintStart_toEndOf="@id/like"
+            app:layout_constraintTop_toTopOf="@id/like" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_message"
+            app:layout_constraintBottom_toBottomOf="@id/comment"
+            app:layout_constraintStart_toEndOf="@id/comment"
+            app:layout_constraintTop_toTopOf="@id/comment" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_img" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/liked_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Liked: 4550"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/like"
+            app:layout_constraintTop_toBottomOf="@id/like" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/comment_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="joshua_l The game in Japan was amazing and I want to share some photos"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/save"
+            app:layout_constraintStart_toStartOf="@id/liked_txt"
+            app:layout_constraintTop_toBottomOf="@id/liked_txt"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
