@@ -60,14 +60,14 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
 
     //ViewModel
-    implementation "androidx.fragment:fragment-ktx:1.4.0"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+    implementation "androidx.fragment:fragment-ktx:1.4.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
 
     // Koin main features for Android (Scope,ViewModel ...)
     implementation "io.insert-koin:koin-android:3.1.2"
 
     // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
 
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'

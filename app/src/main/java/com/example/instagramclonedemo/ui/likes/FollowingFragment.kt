@@ -6,16 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.instagramclonedemo.R
-import com.example.instagramclonedemo.databinding.FragmentLikesBinding
+import com.example.instagramclonedemo.databinding.FragmentFollowingBinding
 
-class LikesFragment : Fragment() {
-    private val binding by lazy { FragmentLikesBinding.inflate(layoutInflater) }
+class FollowingFragment : Fragment() {
+    private val binding by lazy { FragmentFollowingBinding.inflate(layoutInflater) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // init()
+        // Inflate the layout for this fragment
         return binding.root
     }
 
