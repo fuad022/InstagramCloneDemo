@@ -9,12 +9,20 @@
         android:id="@+id/home"
         android:name="com.example.instagramclonedemo.ui.home.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_directMessagesFragment"
+            app:destination="@id/directMessagesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/search"
         android:name="com.example.instagramclonedemo.ui.search.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_search_to_igtvFragment"
+            app:destination="@id/igtvFragment" />
+    </fragment>
     <fragment
         android:id="@+id/likes"
         android:name="com.example.instagramclonedemo.ui.likes.LikesFragment"
@@ -33,9 +41,27 @@
         android:id="@+id/profileEditFragment"
         android:name="com.example.instagramclonedemo.ui.profileedit.ProfileEditFragment"
         android:label="ProfileEditFragment"
-        tools:layout="@layout/fragment_profile_edit" >
+        tools:layout="@layout/fragment_profile_edit">
         <action
             android:id="@+id/action_profileEditFragment_to_profile"
             app:destination="@id/profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/directMessagesFragment"
+        android:name="com.example.instagramclonedemo.ui.directmessages.DirectMessagesFragment"
+        android:label="DirectMessagesFragment"
+        tools:layout="@layout/fragment_direct_messages">
+        <action
+            android:id="@+id/action_directMessagesFragment_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/igtvFragment"
+        android:name="com.example.instagramclonedemo.ui.igtv.IgtvFragment"
+        android:label="IgtvFragment"
+        tools:layout="@layout/fragment_igtv">
+        <action
+            android:id="@+id/action_igtvFragment_to_search"
+            app:destination="@id/search" />
     </fragment>
 </navigation>

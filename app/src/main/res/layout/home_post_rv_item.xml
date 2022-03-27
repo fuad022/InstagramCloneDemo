@@ -103,7 +103,7 @@
             app:layout_constraintTop_toBottomOf="@id/post_img" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/liked_txt"
+            android:id="@+id/liked_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -123,8 +123,8 @@
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="@id/save"
-            app:layout_constraintStart_toStartOf="@id/liked_txt"
-            app:layout_constraintTop_toBottomOf="@id/liked_txt"
+            app:layout_constraintStart_toStartOf="@id/liked_count"
+            app:layout_constraintTop_toBottomOf="@id/liked_count"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

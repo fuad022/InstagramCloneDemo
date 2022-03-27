@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">InstagramCloneDemo</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">Home</string>
     <string name="search">Search</string>
@@ -10,7 +9,7 @@
 
     <string name="test_text">
     <![CDATA[
-    <p> <b>Title</b> content content content  content content content </p>
+    <p> <b>Title</b> content content content content content content </p>
     ]]>
     </string>
 </resources>

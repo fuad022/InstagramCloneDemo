@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import androidx.navigation.ui.setupWithNavController
 import com.bumptech.glide.Glide
@@ -17,6 +18,7 @@ import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import com.example.instagramclonedemo.R
 import com.example.instagramclonedemo.databinding.FragmentRootBinding
+import com.example.instagramclonedemo.util.Util.dpToPx
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class RootFragment : Fragment() {
@@ -49,21 +51,41 @@ class RootFragment : Fragment() {
             .apply(
                 RequestOptions.circleCropTransform()
             ).into(object :
-                CustomTarget<Bitmap>(dpToPx(24), dpToPx(24)) {
+//                CustomTarget<Bitmap>(dpToPx(24), dpToPx(24)) {
+                CustomTarget<Bitmap>(dpToPx(24, requireContext()), dpToPx(24, requireContext())) {
                 override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
                     menuItem?.icon = BitmapDrawable(resources, resource)
                 }
 
                 override fun onLoadCleared(placeholder: Drawable?) {}
             })
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.directMessagesFragment -> hideBottomNav()
+                R.id.profileEditFragment -> hideBottomNav()
+//                R.id.igtvFragment -> hideBottomNav()
+                else -> showBottomNav()
+            }
+        }
     }
 
-    fun dpToPx(dp: Int): Int {
-        val r = requireContext().resources
-        return TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP,
-            dp.toFloat(),
-            r.displayMetrics
-        ).toInt()
+    private fun hideBottomNav() {
+//        binding.bottomNav.visibility = View.GONE
+        binding.bottomNav.isVisible = false
     }
+
+    private fun showBottomNav() {
+//        binding.bottomNav.visibility = View.VISIBLE
+        binding.bottomNav.isVisible = true
+    }
+
+//    fun dpToPx(dp: Int): Int {
+//        val r = requireContext().resources
+//        return TypedValue.applyDimension(
+//            TypedValue.COMPLEX_UNIT_DIP,
+//            dp.toFloat(),
+//            r.displayMetrics
+//        ).toInt()
+//    }
 }

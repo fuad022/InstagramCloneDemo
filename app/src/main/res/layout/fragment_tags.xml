@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:spanCount="3"
             tools:itemCount="9"
-            tools:listitem="@layout/tags_rv_item" />
+            tools:listitem="@layout/profile_grid_rv_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
