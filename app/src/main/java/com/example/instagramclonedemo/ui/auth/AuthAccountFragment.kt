@@ -16,6 +16,7 @@ class AuthAccountFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+//        binding.footerTxt.text =
         init()
         return binding.root
     }
@@ -27,7 +28,8 @@ class AuthAccountFragment : Fragment() {
         }
 
         binding.btn.setOnClickListener {
-            val action = AuthAccountFragmentDirections.actionAuthAccountFragmentToAuthLoginFragment()
+            val action =
+                AuthAccountFragmentDirections.actionAuthAccountFragmentToAuthLoginFragment()
             findNavController().navigate(action)
         }
     }
