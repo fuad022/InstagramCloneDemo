@@ -12,9 +12,11 @@ class LikesAdapter : ListAdapter<LikesModel, LikesAdapter.ItemHolder>(DiffCallba
 
     class ItemHolder(private val binding: LikesRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: LikesModel) {
-            binding.ownerImg.setImageResource(model.ownerImg)
-            binding.eventTxt.text = model.eventTxt
-            if (model.image != null) binding.img.setImageResource(model.image)
+            binding.newTxt.text = model.dayMonth
+
+            val likesNestedAdapter = LikesNestedAdapter()
+            binding.likesRv.adapter = likesNestedAdapter
+            likesNestedAdapter.submitList(model.list)
         }
     }
 

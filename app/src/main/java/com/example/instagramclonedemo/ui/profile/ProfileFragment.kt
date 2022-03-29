@@ -24,7 +24,7 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        initMenuBtn()
+//        initMenuBtn()
         observeStoriesList()
         init()
         return binding.root
@@ -32,7 +32,7 @@ class ProfileFragment : Fragment() {
 
     private fun initMenuBtn() {
         binding.menu.setOnClickListener {
-            ProfileMenuBottomSheet().show(activity?.supportFragmentManager!!, "BottomSheetDialog")
+//            ProfileMenuBottomSheet().show(activity?.supportFragmentManager!!, "BottomSheetDialog")
         }
     }
 

@@ -146,32 +146,6 @@ object MockData {
         return list
     }
 
-    fun getLikesNewList(): List<LikesModel> {
-        val list: ArrayList<LikesModel> = arrayListOf()
-        list.add(LikesModel(R.drawable.photo_1, getSpannableText("karennne", "liked your photo. 1h"), R.drawable.likes_img_1))
-        return list
-    }
-
-    fun getLikesTodayList(): List<LikesModel> {
-        val list: ArrayList<LikesModel> = arrayListOf()
-        list.add(LikesModel(R.drawable.photo_2, getSpannableText("kiero_d", "liked your photo. 3h"), R.drawable.likes_img_2))
-        return list
-    }
-
-    fun getLikesThisWeekList(): List<LikesModel> {
-        val list: ArrayList<LikesModel> = arrayListOf()
-        list.add(LikesModel(R.drawable.photo_3, getSpannableText("craig_love", "mentioned you in a comment: exactly... 2d"), R.drawable.likes_img_3))
-        list.add(LikesModel(R.drawable.photo_4, getSpannableText("martini_rond", "mentioned you in a comment: This is cool 3d"), R.drawable.likes_img_4))
-        list.add(LikesModel(R.drawable.photo_5, getSpannableText("maxjacobson", "mentioned you in a comment: Oh man... 1d"), R.drawable.likes_img_4))
-        return list
-    }
-
-    fun getLikesThisMonthList(): List<LikesModel> {
-        val list: ArrayList<LikesModel> = arrayListOf()
-        list.add(LikesModel(R.drawable.photo_6, getSpannableText("miss_potter", "liked your photo. 1d"), R.drawable.likes_img_5))
-        return list
-    }
-
     fun getProfileStoriesList(): List<ProfileModel> {
         val list: ArrayList<ProfileModel> = arrayListOf()
         list.add(ProfileModel(R.drawable.add_story_img_new, "New"))
@@ -191,6 +165,42 @@ object MockData {
         list.add(ProfileModel(R.drawable.vertical_img_6, null))
         list.add(ProfileModel(R.drawable.vertical_img_7, null))
         list.add(ProfileModel(R.drawable.vertical_img_8, null))
+        return list
+    }
+
+    fun getLikesList(): List<LikesModel> {
+        val list: ArrayList<LikesModel> = arrayListOf()
+        list.add(LikesModel("New", getNewLikesNestedList()))
+        list.add(LikesModel("Today", getTodayLikesNestedList()))
+        list.add(LikesModel("This Week", getThisWeekLikesNestedList()))
+        list.add(LikesModel("This Month", getThisMonthLikesNestedList()))
+
+        return list
+    }
+
+    fun getNewLikesNestedList(): List<LikesNestedModel> {
+        val list: ArrayList<LikesNestedModel> = arrayListOf()
+        list.add(LikesNestedModel(R.drawable.photo_1, "karennne liked your photo. 1h", R.drawable.likes_img_1))
+        return list
+    }
+
+    fun getTodayLikesNestedList(): List<LikesNestedModel> {
+        val list: ArrayList<LikesNestedModel> = arrayListOf()
+        list.add(LikesNestedModel(R.drawable.photo_2, "kiero_d liked your photo. 3h", R.drawable.likes_img_2))
+        return list
+    }
+
+    fun getThisWeekLikesNestedList(): List<LikesNestedModel> {
+        val list: ArrayList<LikesNestedModel> = arrayListOf()
+        list.add(LikesNestedModel(R.drawable.photo_3, "craig_love mentioned you in a comment: exactly... 2d", R.drawable.likes_img_3))
+        list.add(LikesNestedModel(R.drawable.photo_4, "martini_rond mentioned you in a comment: This is cool 3d", R.drawable.likes_img_4))
+        list.add(LikesNestedModel(R.drawable.photo_5, "maxjacobson mentioned you in a comment: Oh man... 1d", R.drawable.likes_img_5))
+        return list
+    }
+
+    fun getThisMonthLikesNestedList(): List<LikesNestedModel> {
+        val list: ArrayList<LikesNestedModel> = arrayListOf()
+        list.add(LikesNestedModel(R.drawable.photo_6, "miss_potter liked your photo. 1d", R.drawable.likes_img_6))
         return list
     }
 }

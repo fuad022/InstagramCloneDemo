@@ -4,7 +4,8 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class LikesModel(
-    val dayMonth: String?,
-    val list: List<LikesNestedModel>?
+data class LikesNestedModel(
+    val ownerImg: Int,
+    val eventTxt: String,
+    val image: Int?
 ) : Parcelable

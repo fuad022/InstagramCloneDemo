@@ -19,38 +19,14 @@ class YouFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        initNewLikes()
-        initTodayLikes()
-        initThisWeekLikes()
-        initThisMonthLikes()
+        initLikes()
         return binding.root
     }
 
-    private fun initNewLikes() {
-        likesViewModel.mockNewLikesDataList.observe(viewLifecycleOwner) {
+    private fun initLikes() {
+        likesViewModel.mockLikesDataList.observe(viewLifecycleOwner) {
             likesAdapter.submitList(it.toMutableList())
         }
-        binding.newRv.adapter = likesAdapter
-    }
-
-    private fun initTodayLikes() {
-        likesViewModel.mockTodayLikesDataList.observe(viewLifecycleOwner) {
-            likesAdapter.submitList(it.toMutableList())
-        }
-        binding.todayRv.adapter = likesAdapter
-    }
-
-    private fun initThisWeekLikes() {
-        likesViewModel.mockThisWeekLikesDataList.observe(viewLifecycleOwner) {
-            likesAdapter.submitList(it.toMutableList())
-        }
-        binding.thisWeekRv.adapter = likesAdapter
-    }
-
-    private fun initThisMonthLikes() {
-        likesViewModel.mockThisMonthLikesDataList.observe(viewLifecycleOwner) {
-            likesAdapter.submitList(it.toMutableList())
-        }
-        binding.thisMonthRv.adapter = likesAdapter
+        binding.youLikesRv.adapter = likesAdapter
     }
 }
