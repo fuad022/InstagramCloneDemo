@@ -10,8 +10,7 @@ import com.example.instagramclonedemo.databinding.HomePostRvItemBinding
 
 class HomePostAdapter : ListAdapter<HomePostModel, HomePostAdapter.ItemHolder>(DiffCallback()) {
 
-    class ItemHolder(private val binding: HomePostRvItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class ItemHolder(private val binding: HomePostRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: HomePostModel) {
             binding.profileImg.setImageResource(model.imageProfilePost)
             binding.username.text = model.usernamePost

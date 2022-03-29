@@ -27,6 +27,7 @@
             android:id="@+id/event_txt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_text_regular"
             android:text="joshua_l The game in Japan was amazing and I want to share some photos"
             android:textColor="@color/black"
             android:textSize="12sp"

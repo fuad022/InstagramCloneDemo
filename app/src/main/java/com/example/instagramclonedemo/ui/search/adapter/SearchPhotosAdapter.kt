@@ -10,8 +10,7 @@ import com.example.instagramclonedemo.databinding.PhotosRvItemBinding
 
 class SearchPhotosAdapter : ListAdapter<SearchModel, SearchPhotosAdapter.ItemHolder>(DiffCallback()) {
 
-    class ItemHolder(private val binding: PhotosRvItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class ItemHolder(private val binding: PhotosRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: SearchModel) {
             binding.img.setImageResource(model.photo!!)
         }

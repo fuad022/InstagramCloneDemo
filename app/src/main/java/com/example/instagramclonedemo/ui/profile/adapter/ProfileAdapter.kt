@@ -11,8 +11,7 @@ import com.example.instagramclonedemo.databinding.ProfileStoriesRvItemBinding
 
 class ProfileAdapter : ListAdapter<ProfileModel, ProfileAdapter.ItemHolder>(DiffCallback()) {
 
-    class ItemHolder(private val binding: ProfileGridRvItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class ItemHolder(private val binding: ProfileGridRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: ProfileModel) {
             binding.img.setImageResource(model.image)
         }

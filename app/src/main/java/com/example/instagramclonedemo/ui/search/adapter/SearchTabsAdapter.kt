@@ -10,8 +10,7 @@ import com.example.instagramclonedemo.databinding.TabsRvItemBinding
 
 class SearchTabsAdapter : ListAdapter<SearchModel, SearchTabsAdapter.ItemHolder>(DiffCallback()) {
 
-    class ItemHolder(private val binding: TabsRvItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class ItemHolder(private val binding: TabsRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: SearchModel) {
             if (model.icon != null) binding.tabBtn.setCompoundDrawablesWithIntrinsicBounds(model.icon, 0, 0, 0)
             binding.tabBtn.text = model.title

@@ -10,8 +10,7 @@ import com.example.instagramclonedemo.databinding.MessageItemBinding
 
 class DirectMessagesAdapter : ListAdapter<DirectMessagesModel, DirectMessagesAdapter.ItemHolder>(DiffCallback()) {
 
-    class ItemHolder(private val binding: MessageItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class ItemHolder(private val binding: MessageItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: DirectMessagesModel) {
             binding.img.setImageResource(model.imageProfileMessages)
             binding.username.text = model.usernameMessages

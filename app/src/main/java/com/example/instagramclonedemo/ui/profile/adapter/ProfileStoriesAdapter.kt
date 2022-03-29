@@ -10,8 +10,7 @@ import com.example.instagramclonedemo.databinding.ProfileStoriesRvItemBinding
 
 class ProfileStoriesAdapter : ListAdapter<ProfileModel, ProfileStoriesAdapter.ItemHolder>(DiffCallback()) {
 
-    class ItemHolder(private val binding: ProfileStoriesRvItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class ItemHolder(private val binding: ProfileStoriesRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: ProfileModel) {
             binding.img.setImageResource(model.image)
             binding.title.text = model.profileStoriesName

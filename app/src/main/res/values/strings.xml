@@ -13,5 +13,7 @@
     ]]>
     </string>
 
-    <string name="create_account">Don\'t have an account? <b>Sign up</b></string>
+    <string name="create_account">Don\'t have an account? <font color='#3897f0'>Sign up.</font></string>
+    <string name="auth_account">Don\'t have an account? <b><font color='#FF000000'>Sign up.</font></b></string>
+    <string name="bio_str">Digital goodies designer <font color='#05386b'>@pixsellz</font> Everything is designed</string>
 </resources>

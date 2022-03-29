@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.instagramclonedemo.R
 import com.example.instagramclonedemo.databinding.FragmentProfileEditBinding
 
@@ -15,8 +16,19 @@ class ProfileEditFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
+        init()
         return binding.root
     }
 
+    private fun init() {
+        binding.cancel.setOnClickListener {
+            val action = ProfileEditFragmentDirections.actionProfileEditFragmentToProfile()
+            findNavController().navigate(action)
+        }
+
+        binding.done.setOnClickListener {
+            val action = ProfileEditFragmentDirections.actionProfileEditFragmentToProfile()
+            findNavController().navigate(action)
+        }
+    }
 }

@@ -1,6 +1,7 @@
 package com.example.instagramclonedemo.ui.likes
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +14,10 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class FollowingFragment : Fragment() {
     private val binding by lazy { FragmentFollowingBinding.inflate(layoutInflater) }
     private val likesViewModel: LikesViewModel by viewModel()
-    private val likesAdapter = LikesAdapter()
+    private val likesAdapter1 = LikesAdapter()
+    private val likesAdapter2 = LikesAdapter()
+    private val likesAdapter3 = LikesAdapter()
+    private val likesAdapter4 = LikesAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,30 +32,34 @@ class FollowingFragment : Fragment() {
 
     private fun initNewLikes() {
         likesViewModel.mockNewLikesDataList.observe(viewLifecycleOwner) {
-            likesAdapter.submitList(it.toMutableList())
+            likesAdapter1.submitList(it.toMutableList())
+            Log.d("initNewLikes", it.toString())
         }
-        binding.newRv.adapter = likesAdapter
+        binding.newRv.adapter = likesAdapter1
     }
 
     private fun initTodayLikes() {
         likesViewModel.mockTodayLikesDataList.observe(viewLifecycleOwner) {
-            likesAdapter.submitList(it.toMutableList())
+            likesAdapter2.submitList(it.toMutableList())
+            Log.d("initTodayLikes", it.toString())
         }
-        binding.todayRv.adapter = likesAdapter
+        binding.todayRv.adapter = likesAdapter2
     }
 
     private fun initThisWeekLikes() {
         likesViewModel.mockThisWeekLikesDataList.observe(viewLifecycleOwner) {
-            likesAdapter.submitList(it.toMutableList())
+            likesAdapter3.submitList(it.toMutableList())
+            Log.d("initThisWeekLikes", it.toString())
         }
-        binding.thisWeekRv.adapter = likesAdapter
+        binding.thisWeekRv.adapter = likesAdapter3
     }
 
     private fun initThisMonthLikes() {
         likesViewModel.mockThisMonthLikesDataList.observe(viewLifecycleOwner) {
-            likesAdapter.submitList(it.toMutableList())
+            likesAdapter4.submitList(it.toMutableList())
+            Log.d("initThisMonthLikes", it.toString())
         }
-        binding.thisMonthRv.adapter = likesAdapter
+        binding.thisMonthRv.adapter = likesAdapter4
     }
 
 }

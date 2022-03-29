@@ -10,8 +10,7 @@ import com.example.instagramclonedemo.databinding.LikesRvItemBinding
 
 class LikesAdapter : ListAdapter<LikesModel, LikesAdapter.ItemHolder>(DiffCallback()) {
 
-    class ItemHolder(private val binding: LikesRvItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class ItemHolder(private val binding: LikesRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(model: LikesModel) {
             binding.ownerImg.setImageResource(model.ownerImg)
             binding.eventTxt.text = model.eventTxt

@@ -16,7 +16,6 @@ class AuthAccountFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        binding.footerTxt.text =
         init()
         return binding.root
     }
