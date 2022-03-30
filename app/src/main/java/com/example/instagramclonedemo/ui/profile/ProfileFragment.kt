@@ -1,11 +1,13 @@
 package com.example.instagramclonedemo.ui.profile
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.instagramclonedemo.R
 import com.example.instagramclonedemo.databinding.FragmentProfileBinding
@@ -32,11 +34,23 @@ class ProfileFragment : Fragment() {
 
     private fun initMenuBtn() {
         binding.menu.setOnClickListener {
-            if (binding.drawerLayout.isDrawerOpen(GravityCompat.END)) {
+            if (binding.drawerLayout.isDrawerOpen(GravityCompat.END))
                 binding.drawerLayout.closeDrawer(GravityCompat.END)
-            }
             binding.drawerLayout.openDrawer(GravityCompat.END)
+            setupDrawerAnimation()
         }
+    }
+
+    private fun setupDrawerAnimation() {
+        binding.drawerLayout.elevation = 0f
+        binding.drawerLayout.setScrimColor(Color.TRANSPARENT)
+        binding.drawerLayout.addDrawerListener(object : DrawerLayout.SimpleDrawerListener() {
+            override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
+                val slideX = drawerView.width * slideOffset
+                binding.constraint.translationX = -slideX
+            }
+        }
+        )
     }
 
     private fun observeStoriesList() {
