@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/archive"
+            android:icon="@drawable/ic_archive_menu"
+            android:title="Archive" />
+        <item
+            android:id="@+id/your_activity"
+            android:icon="@drawable/ic_your_activity_menu"
+            android:title="Your Activity" />
+        <item
+            android:id="@+id/nametag"
+            android:icon="@drawable/ic_nametag_menu"
+            android:title="Nametag" />
+        <item
+            android:id="@+id/saved"
+            android:icon="@drawable/ic_saved_menu"
+            android:title="Saved" />
+        <item
+            android:id="@+id/discover_people"
+            android:icon="@drawable/ic_discover_people_menu"
+            android:title="Discover People" />
+        <item
+            android:id="@+id/open_facebook"
+            android:icon="@drawable/ic_open_facebook_menu"
+            android:title="Open Facebook" />
+    </group>
+</menu>

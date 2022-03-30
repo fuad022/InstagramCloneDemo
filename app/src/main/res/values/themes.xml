@@ -25,6 +25,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="menu_font">
+        <item name="fontFamily">@font/sf_pro_text_regular</item>
+    </style>
+
 <!--    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">-->
 <!--        <item name="bottomSheetStyle">@style/AppModalStyle</item>-->
 <!--    </style>-->

@@ -5,12 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.instagramclonedemo.R
 import com.example.instagramclonedemo.databinding.FragmentProfileBinding
 import com.example.instagramclonedemo.ui.profile.adapter.ProfileStoriesAdapter
 import com.example.instagramclonedemo.ui.profile.adapter.ViewPagerAdapter
-import com.example.instagramclonedemo.ui.profile.bottomsheet.ProfileMenuBottomSheet
 import com.example.instagramclonedemo.ui.profile.viewmodel.ProfileViewModel
 import com.google.android.material.tabs.TabLayoutMediator
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -24,7 +24,7 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-//        initMenuBtn()
+        initMenuBtn()
         observeStoriesList()
         init()
         return binding.root
@@ -32,7 +32,10 @@ class ProfileFragment : Fragment() {
 
     private fun initMenuBtn() {
         binding.menu.setOnClickListener {
-//            ProfileMenuBottomSheet().show(activity?.supportFragmentManager!!, "BottomSheetDialog")
+            if (binding.drawerLayout.isDrawerOpen(GravityCompat.END)) {
+                binding.drawerLayout.closeDrawer(GravityCompat.END)
+            }
+            binding.drawerLayout.openDrawer(GravityCompat.END)
         }
     }
 
