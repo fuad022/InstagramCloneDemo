@@ -180,27 +180,27 @@ object MockData {
 
     fun getNewLikesNestedList(): List<LikesNestedModel> {
         val list: ArrayList<LikesNestedModel> = arrayListOf()
-        list.add(LikesNestedModel(R.drawable.photo_1, "karennne liked your photo. 1h", R.drawable.likes_img_1))
+        list.add(LikesNestedModel(R.drawable.photo_1, "<b>karennne</b> liked your photo. 1h", R.drawable.likes_img_1))
         return list
     }
 
     fun getTodayLikesNestedList(): List<LikesNestedModel> {
         val list: ArrayList<LikesNestedModel> = arrayListOf()
-        list.add(LikesNestedModel(R.drawable.photo_2, "kiero_d liked your photo. 3h", R.drawable.likes_img_2))
+        list.add(LikesNestedModel(R.drawable.photo_2, "<b>kiero_d</b> liked your photo. 3h", R.drawable.likes_img_2))
         return list
     }
 
     fun getThisWeekLikesNestedList(): List<LikesNestedModel> {
         val list: ArrayList<LikesNestedModel> = arrayListOf()
-        list.add(LikesNestedModel(R.drawable.photo_3, "craig_love mentioned you in a comment: exactly... 2d", R.drawable.likes_img_3))
-        list.add(LikesNestedModel(R.drawable.photo_4, "martini_rond mentioned you in a comment: This is cool 3d", R.drawable.likes_img_4))
-        list.add(LikesNestedModel(R.drawable.photo_5, "maxjacobson mentioned you in a comment: Oh man... 1d", R.drawable.likes_img_5))
+        list.add(LikesNestedModel(R.drawable.photo_3, "<b>craig_love</b> mentioned you in a comment: exactly... 2d", R.drawable.likes_img_3))
+        list.add(LikesNestedModel(R.drawable.photo_4, "<b>martini_rond</b> mentioned you in a comment: This is cool 3d", R.drawable.likes_img_4))
+        list.add(LikesNestedModel(R.drawable.photo_5, "<b>maxjacobson</b> mentioned you in a comment: Oh man... 1d", R.drawable.likes_img_5))
         return list
     }
 
     fun getThisMonthLikesNestedList(): List<LikesNestedModel> {
         val list: ArrayList<LikesNestedModel> = arrayListOf()
-        list.add(LikesNestedModel(R.drawable.photo_6, "miss_potter liked your photo. 1d", R.drawable.likes_img_6))
+        list.add(LikesNestedModel(R.drawable.photo_6, "<b>miss_potter</b> liked your photo. 1d", R.drawable.likes_img_6))
         return list
     }
 }

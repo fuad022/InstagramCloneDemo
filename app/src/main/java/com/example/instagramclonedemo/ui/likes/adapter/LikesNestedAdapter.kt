@@ -2,18 +2,22 @@ package com.example.instagramclonedemo.ui.likes.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.instagramclonedemo.data.model.LikesNestedModel
 import com.example.instagramclonedemo.databinding.LikesNestedRvItemBinding
 
-class LikesNestedAdapter : ListAdapter<LikesNestedModel, LikesNestedAdapter.ItemHolder>(DiffCallback()) {
+class LikesNestedAdapter :
+    ListAdapter<LikesNestedModel, LikesNestedAdapter.ItemHolder>(DiffCallback()) {
 
-    class ItemHolder(private val binding: LikesNestedRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ItemHolder(private val binding: LikesNestedRvItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(model: LikesNestedModel) {
             binding.ownerImg.setImageResource(model.ownerImg)
-            binding.eventTxt.text = model.eventTxt
+            binding.eventTxt.text =
+                HtmlCompat.fromHtml(model.eventTxt, HtmlCompat.FROM_HTML_MODE_LEGACY)
             if (model.image != null) binding.img.setImageResource(model.image)
         }
     }
