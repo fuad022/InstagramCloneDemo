@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.instagramclonedemo.databinding.FragmentDirectMessagesBinding
 import com.example.instagramclonedemo.ui.directmessages.adapter.DirectMessagesAdapter
 import com.example.instagramclonedemo.ui.directmessages.viewmodel.DirectMessagesViewModel
@@ -19,8 +20,16 @@ class DirectMessagesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        initBackBtn()
         observeMessageList()
         return binding.root
+    }
+
+    private fun initBackBtn() {
+        binding.back.setOnClickListener {
+            val action = DirectMessagesFragmentDirections.actionDirectMessagesFragmentToHome()
+            findNavController().navigate(action)
+        }
     }
 
     private fun observeMessageList() {

@@ -119,6 +119,62 @@ object MockData {
                 "2h"
             )
         )
+        list.add(
+            DirectMessagesModel(
+                R.drawable.photo_1,
+                "joshua_l",
+                "Have a nice day, Joshua!",
+                "now"
+            )
+        )
+        list.add(
+            DirectMessagesModel(
+                R.drawable.photo_2,
+                "karennne",
+                "Have a nice day, Karen!",
+                "now"
+            )
+        )
+        list.add(
+            DirectMessagesModel(
+                R.drawable.photo_3,
+                "martini_rond",
+                "Have a nice day, Martin!",
+                "15m"
+            )
+        )
+        list.add(
+            DirectMessagesModel(
+                R.drawable.photo_4,
+                "andrewww_",
+                "Have a nice day, Andrew!",
+                "20m"
+            )
+        )
+        list.add(
+            DirectMessagesModel(
+                R.drawable.photo_5,
+                "kiero_d",
+                "Have a nice day, Kiero!",
+                "1m"
+            )
+        )
+        list.add(
+            DirectMessagesModel(
+                R.drawable.photo_6,
+                "maxjacobson",
+                "Have a nice day, Max!",
+                "2h"
+            )
+        )
+        list.add(
+            DirectMessagesModel(
+                R.drawable.photo_7,
+                "jamie.franco",
+                "Have a nice day, Jamie!",
+                "2h"
+            )
+        )
 
         return list
     }
@@ -174,6 +230,16 @@ object MockData {
         list.add(ProfileModel(R.drawable.vertical_img_5, null))
         list.add(ProfileModel(R.drawable.vertical_img_6, null))
         list.add(ProfileModel(R.drawable.vertical_img_7, null))
+        list.add(ProfileModel(R.drawable.vertical_img_8, null))
+        list.add(ProfileModel(R.drawable.vertical_img_8, null))
+        list.add(ProfileModel(R.drawable.vertical_img_8, null))
+        list.add(ProfileModel(R.drawable.vertical_img_8, null))
+        list.add(ProfileModel(R.drawable.vertical_img_8, null))
+        list.add(ProfileModel(R.drawable.vertical_img_8, null))
+        list.add(ProfileModel(R.drawable.vertical_img_8, null))
+        list.add(ProfileModel(R.drawable.vertical_img_8, null))
+        list.add(ProfileModel(R.drawable.vertical_img_8, null))
+        list.add(ProfileModel(R.drawable.vertical_img_8, null))
         list.add(ProfileModel(R.drawable.vertical_img_8, null))
         return list
     }

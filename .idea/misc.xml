@@ -6,15 +6,51 @@
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/bottom_sheet_background.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/button.xml" value="0.37447916666666664" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/home_selector.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_add_chat.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_add_image.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_archive_menu.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_arrow_back.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_arrow_down.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_camera.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_close_friends_menu.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_comment.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_direct_messages_camera.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_discover_people_menu.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_fb_logo.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_grid_off.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_grid_on.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_home_off.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_home_on.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_horiz_dots.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_igtv.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_igtv_small.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_instagram_logo.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_instagram_logo_small.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_like_off.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_like_on.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_lock.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_menu.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_message.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_nametag_menu.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_open_facebook_menu.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_oval_img.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_save.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_saved_menu.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_search.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_search_off.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_search_on.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_settings_menu.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_shape.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_shop.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_tags_off.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_tags_on.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/ic_your_activity_menu.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/icon_selector.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/likes_selector.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/login_btn_background.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/login_input.xml" value="0.37083333333333335" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/profile_stories_background.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/search_selector.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/text_input_shape.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/top_border_grey.xml" value="0.37083333333333335" />
@@ -43,7 +79,7 @@
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/message_item.xml" value="0.5" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/photos_rv_item.xml" value="0.3546875" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/profile_grid_rv_item.xml" value="0.3546875" />
-        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/profile_stories_rv_item.xml" value="0.3546875" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/profile_stories_rv_item.xml" value="0.5" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/tabs_rv_item.xml" value="0.5" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/tags_rv_item.xml" value="0.3546875" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3546875" />
