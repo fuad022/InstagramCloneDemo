@@ -2,7 +2,9 @@ package com.example.instagramclonedemo.util
 
 import android.content.Context
 import android.text.SpannableStringBuilder
+import android.text.Spanned
 import android.util.TypedValue
+import androidx.core.text.HtmlCompat
 import androidx.core.text.bold
 
 object Util {
@@ -14,6 +16,8 @@ object Util {
             .append(commentText)
             .toString()
     }
+
+    fun getStr(s: String): Spanned = HtmlCompat.fromHtml(s, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
     fun dpToPx(dp: Int, context: Context): Int {
         val r = context.resources

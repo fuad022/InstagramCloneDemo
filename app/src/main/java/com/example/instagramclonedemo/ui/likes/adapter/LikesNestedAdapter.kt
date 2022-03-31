@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.instagramclonedemo.data.model.LikesNestedModel
 import com.example.instagramclonedemo.databinding.LikesNestedRvItemBinding
+import com.example.instagramclonedemo.util.Util.getStr
 
 class LikesNestedAdapter :
     ListAdapter<LikesNestedModel, LikesNestedAdapter.ItemHolder>(DiffCallback()) {
@@ -16,8 +17,7 @@ class LikesNestedAdapter :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(model: LikesNestedModel) {
             binding.ownerImg.setImageResource(model.ownerImg)
-            binding.eventTxt.text =
-                HtmlCompat.fromHtml(model.eventTxt, HtmlCompat.FROM_HTML_MODE_LEGACY)
+            binding.eventTxt.text = getStr(model.eventTxt)
             if (model.image != null) binding.img.setImageResource(model.image)
         }
     }
