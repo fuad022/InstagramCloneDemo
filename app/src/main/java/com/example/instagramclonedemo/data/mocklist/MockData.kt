@@ -143,6 +143,16 @@ object MockData {
         list.add(SearchModel(null, null, R.drawable.vertical_img_6))
         list.add(SearchModel(null, null, R.drawable.vertical_img_7))
         list.add(SearchModel(null, null, R.drawable.vertical_img_8))
+        list.add(SearchModel(null, null, R.drawable.vertical_img_8))
+        list.add(SearchModel(null, null, R.drawable.vertical_img_8))
+        list.add(SearchModel(null, null, R.drawable.vertical_img_8))
+        list.add(SearchModel(null, null, R.drawable.vertical_img_8))
+        list.add(SearchModel(null, null, R.drawable.vertical_img_8))
+        list.add(SearchModel(null, null, R.drawable.vertical_img_8))
+        list.add(SearchModel(null, null, R.drawable.vertical_img_8))
+        list.add(SearchModel(null, null, R.drawable.vertical_img_8))
+        list.add(SearchModel(null, null, R.drawable.vertical_img_8))
+        list.add(SearchModel(null, null, R.drawable.vertical_img_8))
         return list
     }
 

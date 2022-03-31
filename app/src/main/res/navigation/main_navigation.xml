@@ -63,5 +63,8 @@
         <action
             android:id="@+id/action_igtvFragment_to_search"
             app:destination="@id/search" />
+        <argument
+            android:name="searchModel"
+            app:argType="com.example.instagramclonedemo.data.model.SearchModel" />
     </fragment>
 </navigation>

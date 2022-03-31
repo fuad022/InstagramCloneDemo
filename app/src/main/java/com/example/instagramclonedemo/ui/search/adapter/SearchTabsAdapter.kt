@@ -10,10 +10,15 @@ import com.example.instagramclonedemo.databinding.TabsRvItemBinding
 
 class SearchTabsAdapter : ListAdapter<SearchModel, SearchTabsAdapter.ItemHolder>(DiffCallback()) {
 
-    class ItemHolder(private val binding: TabsRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(model: SearchModel) {
-            if (model.icon != null) binding.tabBtn.setCompoundDrawablesWithIntrinsicBounds(model.icon, 0, 0, 0)
-            binding.tabBtn.text = model.title
+    inner class ItemHolder(private val binding: TabsRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(model: SearchModel?) {
+            model?.let { m ->
+                if (m.icon != null) binding.tabBtn.setCompoundDrawablesWithIntrinsicBounds(m.icon, 0, 0, 0)
+                binding.tabBtn.text = m.title
+                binding.tabBtn.setOnClickListener {
+                    m.let { user -> setOnItemClick?.invoke(user) }
+                }
+            }
         }
     }
 
@@ -46,4 +51,8 @@ class SearchTabsAdapter : ListAdapter<SearchModel, SearchTabsAdapter.ItemHolder>
     override fun submitList(list: List<SearchModel>?) {
         super.submitList(list?.map { it.copy() })
     }
+
+    private var setOnItemClick: ((SearchModel) -> Unit)? = null
+
+    fun setOnClickListener(listener: (SearchModel) -> Unit) { setOnItemClick = listener }
 }

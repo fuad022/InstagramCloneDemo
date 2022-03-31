@@ -64,7 +64,7 @@ class RootFragment : Fragment() {
             when (destination.id) {
                 R.id.directMessagesFragment -> hideBottomNav()
                 R.id.profileEditFragment -> hideBottomNav()
-//                R.id.igtvFragment -> hideBottomNav()
+                R.id.igtvFragment -> hideBottomNav()
                 else -> showBottomNav()
             }
         }

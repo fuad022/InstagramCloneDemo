@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.instagramclonedemo.databinding.FragmentSearchBinding
 import com.example.instagramclonedemo.ui.search.adapter.SearchPhotosAdapter
 import com.example.instagramclonedemo.ui.search.adapter.SearchTabsAdapter
@@ -21,9 +22,20 @@ class SearchFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        observeTabsList()
+        setupTabAdapter()
         observePhotosList()
         return binding.root
+    }
+
+    private fun setupTabAdapter() {
+        searchTabsAdapter.setOnClickListener { user ->
+            user.let {
+                findNavController().navigate(
+                    SearchFragmentDirections.actionSearchToIgtvFragment(user)
+                )
+            }
+        }
+        observeTabsList()
     }
 
     private fun observeTabsList() {
