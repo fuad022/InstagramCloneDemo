@@ -66,242 +66,289 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.appbar.MaterialToolbar>
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/profile_img"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginTop="10dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/user_img_12"
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nasted_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"
-            app:shapeAppearanceOverlay="@style/Circle" />
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/change_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Change Profile Photo"
-            android:textColor="@color/blue"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/profile_img"
-            app:layout_constraintStart_toStartOf="@id/profile_img"
-            app:layout_constraintTop_toBottomOf="@id/profile_img" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/name_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="25dp"
-            android:text="Name"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/change_txt" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profile_img"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_img_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/Circle" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20sp"
-            android:backgroundTint="@color/outline_color"
-            android:hint="Name"
-            android:paddingBottom="20dp"
-            android:text="Jacob West"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@id/name_txt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/name_txt"
-            app:layout_constraintTop_toTopOf="@id/name_txt" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/change_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Change Profile Photo"
+                    android:textColor="@color/blue"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/profile_img"
+                    app:layout_constraintStart_toStartOf="@id/profile_img"
+                    app:layout_constraintTop_toBottomOf="@id/profile_img" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/username_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="25dp"
-            android:text="Username"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/name_txt" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/name_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/change_txt" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/username"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/outline_color"
-            android:hint="Username"
-            android:paddingTop="5dp"
-            android:paddingBottom="20dp"
-            android:text="jacob_w"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="@id/name"
-            app:layout_constraintStart_toStartOf="@id/name"
-            app:layout_constraintTop_toBottomOf="@id/name" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20sp"
+                    android:backgroundTint="@color/outline_color"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="Name"
+                    android:inputType="textFilter"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingBottom="20dp"
+                    android:text="Jacob West"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/name_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/name_txt"
+                    app:layout_constraintTop_toTopOf="@id/name_txt" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/website_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="25dp"
-            android:text="Website"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/username_txt" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/username_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Username"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/name_txt" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/website"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/outline_color"
-            android:hint="Website"
-            android:paddingTop="5dp"
-            android:paddingBottom="20dp"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="@id/username"
-            app:layout_constraintStart_toStartOf="@id/username"
-            app:layout_constraintTop_toBottomOf="@id/username" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/username"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/outline_color"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="Username"
+                    android:inputType="textFilter"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="20dp"
+                    android:text="jacob_w"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@id/name"
+                    app:layout_constraintStart_toStartOf="@id/name"
+                    app:layout_constraintTop_toBottomOf="@id/name" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/bio_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="25dp"
-            android:text="Bio"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/website_txt" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/website_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Website"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/username_txt" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/bio"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/outline_color"
-            android:hint="Bio"
-            android:paddingTop="5dp"
-            android:paddingBottom="20dp"
-            android:text="@string/bio_str"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="@id/website"
-            app:layout_constraintStart_toStartOf="@id/website"
-            app:layout_constraintTop_toBottomOf="@id/website" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/website"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/outline_color"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="Website"
+                    android:inputType="textFilter"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@id/username"
+                    app:layout_constraintStart_toStartOf="@id/username"
+                    app:layout_constraintTop_toBottomOf="@id/username" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/switch_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:text="Switch to Professional Account"
-            android:textColor="@color/blue"
-            android:textSize="13sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bio" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/bio_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Bio"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/website_txt" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/private_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:text="Private Information"
-            android:textColor="@color/black"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/switch_txt" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/bio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/outline_color"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="Bio"
+                    android:inputType="textFilter"
+                    android:maxLength="60"
+                    android:maxLines="2"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/bio_str"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@id/website"
+                    app:layout_constraintStart_toStartOf="@id/website"
+                    app:layout_constraintTop_toBottomOf="@id/website" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/email_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="25dp"
-            android:text="Email"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/private_txt" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/switch_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Switch to Professional Account"
+                    android:textColor="@color/blue"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bio" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/email"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20sp"
-            android:backgroundTint="@color/outline_color"
-            android:hint="Name"
-            android:paddingBottom="20dp"
-            android:text="jacob.west@gmail.com"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@id/email_txt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/email_txt"
-            app:layout_constraintTop_toTopOf="@id/email_txt" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/private_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Private Information"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/switch_txt" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/phone_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="25dp"
-            android:text="Phone"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/email_txt" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/email_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Email"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/private_txt" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/phone"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/outline_color"
-            android:hint="Phone"
-            android:paddingTop="5dp"
-            android:paddingBottom="20dp"
-            android:text="+1 202 555 0147"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="@id/email"
-            app:layout_constraintStart_toStartOf="@id/email"
-            app:layout_constraintTop_toBottomOf="@id/email" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20sp"
+                    android:backgroundTint="@color/outline_color"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="Name"
+                    android:inputType="textFilter"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingBottom="20dp"
+                    android:text="jacob.west@gmail.com"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/email_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/email_txt"
+                    app:layout_constraintTop_toTopOf="@id/email_txt" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/gender_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="25dp"
-            android:text="Gender"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/phone_txt" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/phone_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Phone"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/email_txt" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/gender"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/outline_color"
-            android:hint="Male"
-            android:paddingTop="5dp"
-            android:paddingBottom="20dp"
-            android:text="Male"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="@id/phone"
-            app:layout_constraintStart_toStartOf="@id/phone"
-            app:layout_constraintTop_toBottomOf="@id/phone" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/outline_color"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="Phone"
+                    android:inputType="textFilter"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="20dp"
+                    android:text="+1 202 555 0147"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@id/email"
+                    app:layout_constraintStart_toStartOf="@id/email"
+                    app:layout_constraintTop_toBottomOf="@id/email" />
 
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/gender_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Gender"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/phone_txt" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/gender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/outline_color"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="Male"
+                    android:inputType="textFilter"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="20dp"
+                    android:text="Male"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@id/phone"
+                    app:layout_constraintStart_toStartOf="@id/phone"
+                    app:layout_constraintTop_toBottomOf="@id/phone" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

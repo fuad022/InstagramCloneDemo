@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.instagramclonedemo.R
 import com.example.instagramclonedemo.databinding.FragmentProfileBinding
@@ -27,9 +28,17 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         initMenuBtn()
+        initEditBtn()
         observeStoriesList()
         init()
         return binding.root
+    }
+
+    private fun initEditBtn() {
+        binding.editBtn.setOnClickListener {
+            val action = ProfileFragmentDirections.actionProfileToProfileEditFragment()
+            findNavController().navigate(action)
+        }
     }
 
     private fun initMenuBtn() {
