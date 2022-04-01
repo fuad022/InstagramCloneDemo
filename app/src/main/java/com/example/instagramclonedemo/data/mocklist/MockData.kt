@@ -24,11 +24,9 @@ object MockData {
                 "joshua_l",
                 "Tokyo, Japan",
                 R.drawable.vertical_img_5,
-                "Liked: 4550",
-                getSpannableText(
-                    "joshua_l",
-                    "The food in Japan was amazing and I want to share some photo"
-                )
+                R.drawable.photo_1,
+                "Liked by <b>craig_love</b> and <b>44,686 others</b>",
+                "<b>joshua_l</b> The food in Japan was amazing and I want to share some photo"
             )
         )
         list.add(
@@ -37,11 +35,9 @@ object MockData {
                 "jose_f",
                 "La Paz, Bolivia",
                 R.drawable.vertical_img_6,
-                "Liked: 255",
-                getSpannableText(
-                    "jose_f",
-                    "The food in Bolivia was amazing and I want to share some photo"
-                )
+                R.drawable.photo_2,
+                "Liked by <b>martini_rond</b> and <b>1,753 others</b>",
+                "<b>craig_love</b> The food in Bolivia was amazing and I want to share some photo"
             )
         )
         list.add(
@@ -50,11 +46,9 @@ object MockData {
                 "monica_89",
                 "London, England",
                 R.drawable.vertical_img_7,
-                "Liked: 1201",
-                getSpannableText(
-                    "monica_89",
-                    "The food in England was amazing and I want to share some photo"
-                )
+                R.drawable.photo_3,
+                "Liked by <b>maxjacobson</b> and <b>786 others</b>",
+                "<b>craig_love</b> The food in England was amazing and I want to share some photo"
             )
         )
 
@@ -256,27 +250,63 @@ object MockData {
 
     fun getNewLikesNestedList(): List<LikesNestedModel> {
         val list: ArrayList<LikesNestedModel> = arrayListOf()
-        list.add(LikesNestedModel(R.drawable.photo_1, "<b>karennne</b> liked your photo. 1h", R.drawable.likes_img_1))
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_1,
+                "<b>karennne</b> liked your photo. <font color='#bebec0'>1h</font>",
+                R.drawable.likes_img_1
+            )
+        )
         return list
     }
 
     fun getTodayLikesNestedList(): List<LikesNestedModel> {
         val list: ArrayList<LikesNestedModel> = arrayListOf()
-        list.add(LikesNestedModel(R.drawable.photo_2, "<b>kiero_d</b> liked your photo. 3h", R.drawable.likes_img_2))
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_2,
+                "<b>kiero_d</b> liked your photo. <font color='#bebec0'>3h</font>",
+                R.drawable.likes_img_2
+            )
+        )
         return list
     }
 
     fun getThisWeekLikesNestedList(): List<LikesNestedModel> {
         val list: ArrayList<LikesNestedModel> = arrayListOf()
-        list.add(LikesNestedModel(R.drawable.photo_3, "<b>craig_love</b> mentioned you in a comment: exactly... 2d", R.drawable.likes_img_3))
-        list.add(LikesNestedModel(R.drawable.photo_4, "<b>martini_rond</b> mentioned you in a comment: This is cool 3d", R.drawable.likes_img_4))
-        list.add(LikesNestedModel(R.drawable.photo_5, "<b>maxjacobson</b> mentioned you in a comment: Oh man... 1d", R.drawable.likes_img_5))
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_3,
+                "<b>craig_love</b> mentioned you in a comment: exactly... <font color='#bebec0'>2d</font>",
+                R.drawable.likes_img_3
+            )
+        )
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_4,
+                "<b>martini_rond</b> mentioned you in a comment: This is cool <font color='#bebec0'>3d</font>",
+                R.drawable.likes_img_4
+            )
+        )
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_5,
+                "<b>maxjacobson</b> mentioned you in a comment: Oh man... <font color='#bebec0'>1d</font>",
+                R.drawable.likes_img_5
+            )
+        )
         return list
     }
 
     fun getThisMonthLikesNestedList(): List<LikesNestedModel> {
         val list: ArrayList<LikesNestedModel> = arrayListOf()
-        list.add(LikesNestedModel(R.drawable.photo_6, "<b>miss_potter</b> liked your photo. 1d", R.drawable.likes_img_6))
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_6,
+                "<b>miss_potter</b> liked your photo. <font color='#bebec0'>1d</font>",
+                R.drawable.likes_img_6
+            )
+        )
         return list
     }
 }

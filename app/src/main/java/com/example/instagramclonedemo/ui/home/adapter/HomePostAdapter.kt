@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.instagramclonedemo.data.model.HomePostModel
 import com.example.instagramclonedemo.databinding.HomePostRvItemBinding
+import com.example.instagramclonedemo.util.Util.getStr
 
 class HomePostAdapter : ListAdapter<HomePostModel, HomePostAdapter.ItemHolder>(DiffCallback()) {
 
@@ -16,8 +17,9 @@ class HomePostAdapter : ListAdapter<HomePostModel, HomePostAdapter.ItemHolder>(D
             binding.username.text = model.usernamePost
             binding.location.text = model.locationPost
             binding.postImg.setImageResource(model.imagePost)
-            binding.likedCount.text = model.likedCountPost
-            binding.commentTxt.text = model.commentPost
+            binding.likerImg.setImageResource(model.imageLiker)
+            binding.likedCount.text = getStr(model.likedCountPost)
+            binding.commentTxt.text = getStr(model.commentPost)
         }
     }
 

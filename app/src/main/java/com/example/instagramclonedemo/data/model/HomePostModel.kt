@@ -9,6 +9,7 @@ data class HomePostModel(
     val usernamePost: String,
     val locationPost: String,
     val imagePost: Int,
+    val imageLiker: Int,
     val likedCountPost: String,
     val commentPost: String
 ) : Parcelable

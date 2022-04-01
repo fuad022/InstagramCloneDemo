@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -27,22 +28,22 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:fontFamily="@font/sf_pro_text_semobold"
-            android:text="joshua_l"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@id/profile_img"
-            app:layout_constraintTop_toTopOf="@id/profile_img" />
+            app:layout_constraintTop_toTopOf="@id/profile_img"
+            tools:text="joshua_l" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sf_pro_text_regular"
-            android:text="Tokyo, Japan"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@id/username"
-            app:layout_constraintTop_toBottomOf="@id/username" />
+            app:layout_constraintTop_toBottomOf="@id/username"
+            tools:text="Tokyo, Japan" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/dots"
@@ -103,33 +104,44 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/post_img" />
 
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/liker_img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_img_12"
+            app:layout_constraintStart_toStartOf="@id/like"
+            app:layout_constraintTop_toBottomOf="@id/like"
+            app:shapeAppearanceOverlay="@style/Circle" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/liked_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
             android:fontFamily="@font/sf_pro_text_regular"
-            android:text="Liked: 4550"
             android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/like"
-            app:layout_constraintTop_toBottomOf="@id/like" />
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/liker_img"
+            app:layout_constraintStart_toEndOf="@id/liker_img"
+            app:layout_constraintTop_toTopOf="@id/liker_img"
+            tools:text="Liked by craig_love and 44,686 others" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/comment_txt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/sf_pro_text_regular"
-            android:text="joshua_l The game in Japan was amazing and I want to share some photos"
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/save"
-            app:layout_constraintStart_toStartOf="@id/liked_count"
-            app:layout_constraintTop_toBottomOf="@id/liked_count" />
+            app:layout_constraintStart_toStartOf="@id/liker_img"
+            app:layout_constraintTop_toBottomOf="@id/liker_img"
+            tools:text="joshua_l The game in Japan was amazing and I want to share some photos" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
