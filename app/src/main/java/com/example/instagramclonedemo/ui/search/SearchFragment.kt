@@ -42,10 +42,10 @@ class SearchFragment : Fragment() {
     }
 
     private fun setupTabAdapter() {
-        searchTabsAdapter.setOnClickListener { user ->
-            user.let {
+        searchTabsAdapter.setOnClickListener { model ->
+            model.let {
                 findNavController().navigate(
-                    SearchFragmentDirections.actionSearchToIgtvFragment(user)
+                    SearchFragmentDirections.actionSearchToIgtvFragment(model)
                 )
             }
         }

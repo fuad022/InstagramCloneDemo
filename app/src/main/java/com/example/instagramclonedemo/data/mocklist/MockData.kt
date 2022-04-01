@@ -118,11 +118,11 @@ object MockData {
 
     fun getSearchTabsList(): List<SearchModel> {
         val list: ArrayList<SearchModel> = arrayListOf()
-        list.add(SearchModel(R.drawable.ic_igtv_small, "IGTV", null))
-        list.add(SearchModel(R.drawable.ic_shop, "Shop", null))
-        list.add(SearchModel(null, "Style", null))
-        list.add(SearchModel(null, "Sports", null))
-        list.add(SearchModel(null, "Auto", null))
+        list.add(SearchModel(R.drawable.ic_igtv_small, "IGTV", R.drawable.photo_6))
+        list.add(SearchModel(R.drawable.ic_shop, "Shop", R.drawable.photo_2))
+        list.add(SearchModel(null, "Style", R.drawable.photo_3))
+        list.add(SearchModel(null, "Sports", R.drawable.photo_4))
+        list.add(SearchModel(null, "Auto", R.drawable.photo_5))
         return list
     }
 

@@ -11,13 +11,13 @@ import com.example.instagramclonedemo.databinding.FragmentIgtvBinding
 
 class IgtvFragment : Fragment() {
     private val binding by lazy { FragmentIgtvBinding.inflate(layoutInflater) }
-//    private val args: IgtvFragmentArgs by navArgs()
+    private val args: IgtvFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
+        binding.igtvImg.setImageResource(args.searchModel.photo!!)
         return binding.root
     }
 
