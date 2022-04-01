@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.InstagramCloneDemo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.InstagramCloneDemo" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -10,22 +10,26 @@
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
-<!--        <item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
-<!--        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>-->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Navigation bar color. -->
+        <item name="android:navigationBarColor">@color/white</item>
+        <!-- Disable force dark mode. -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
     <style name="Circle">
         <item name="cornerSize">50%</item>
     </style>
 
-<!--    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">-->
-<!--        <item name="bottomSheetStyle">@style/AppModalStyle</item>-->
-<!--    </style>-->
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/sf_pro_text_semobold</item>
+    </style>
 
-<!--    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">-->
-<!--        <item name="android:background">@drawable/bottom_sheet_background</item>-->
-<!--    </style>-->
-
+    <style name="menu_font">
+        <item name="fontFamily">@font/sf_pro_text_regular</item>
+    </style>
+    
 </resources>
