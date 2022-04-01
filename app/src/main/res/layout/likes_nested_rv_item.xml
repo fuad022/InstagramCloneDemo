@@ -17,24 +17,24 @@
             android:layout_height="70dp"
             android:padding="12dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/user_img_12"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/Circle" />
+            app:shapeAppearanceOverlay="@style/Circle"
+            tools:src="@drawable/user_img_12" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/event_txt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/sf_pro_text_regular"
-            android:text="joshua_l The game in Japan was amazing and I want to share some photos"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@id/owner_img"
             app:layout_constraintEnd_toStartOf="@id/img"
             app:layout_constraintStart_toEndOf="@id/owner_img"
-            app:layout_constraintTop_toTopOf="@id/owner_img" />
+            app:layout_constraintTop_toTopOf="@id/owner_img"
+            tools:text="joshua_l The game in Japan was amazing and I want to share some photos" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/img"
