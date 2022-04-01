@@ -55,6 +55,7 @@
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/text_input_shape.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/drawable/top_border_grey.xml" value="0.37083333333333335" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/activity_main.xml" value="0.340625" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/following_likes_rv_item.xml" value="0.3546875" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/fragment_auth_account.xml" value="0.3546875" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/fragment_auth_login.xml" value="0.3546875" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/fragment_direct_messages.xml" value="0.3546875" />
@@ -82,6 +83,7 @@
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/profile_stories_rv_item.xml" value="0.5" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/tabs_rv_item.xml" value="0.5" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/tags_rv_item.xml" value="0.3546875" />
+        <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/layout/you_likes_rv_item.xml" value="0.3546875" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3546875" />
         <entry key="..\:/AndroidProjects/InstagramCloneDemo/app/src/main/res/menu/nav_drawer_menu.xml" value="0.3546875" />
       </map>

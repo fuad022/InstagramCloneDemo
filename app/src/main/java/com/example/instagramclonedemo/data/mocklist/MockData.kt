@@ -237,13 +237,19 @@ object MockData {
         return list
     }
 
-    fun getLikesList(): List<LikesModel> {
+    fun getYouLikesList(): List<LikesModel> {
         val list: ArrayList<LikesModel> = arrayListOf()
         list.add(LikesModel("New", getNewLikesNestedList()))
         list.add(LikesModel("Today", getTodayLikesNestedList()))
         list.add(LikesModel("This Week", getThisWeekLikesNestedList()))
         list.add(LikesModel("This Month", getThisMonthLikesNestedList()))
 
+        return list
+    }
+
+    fun getFollowingLikesList(): List<LikesModel> {
+        val list: ArrayList<LikesModel> = arrayListOf()
+        list.add(LikesModel(null, getThisWeekLikesNestedList()))
         return list
     }
 

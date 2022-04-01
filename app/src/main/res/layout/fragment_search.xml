@@ -12,9 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        android:clickable="true"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
         tools:context=".ui.search.SearchFragment">
 
         <androidx.core.widget.NestedScrollView
@@ -23,9 +20,6 @@
             android:layout_height="0dp"
             android:fillViewport="true"
             android:overScrollMode="never"
-            android:clickable="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,9 +29,6 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/nested_layout"
                 android:layout_width="match_parent"
-                android:clickable="true"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
                 android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.AppCompatEditText

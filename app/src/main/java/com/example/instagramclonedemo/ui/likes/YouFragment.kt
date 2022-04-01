@@ -24,7 +24,7 @@ class YouFragment : Fragment() {
     }
 
     private fun initLikes() {
-        likesViewModel.mockLikesDataList.observe(viewLifecycleOwner) {
+        likesViewModel.mockYouLikesDataList.observe(viewLifecycleOwner) {
             likesAdapter.submitList(it.toMutableList())
         }
         binding.youLikesRv.adapter = likesAdapter

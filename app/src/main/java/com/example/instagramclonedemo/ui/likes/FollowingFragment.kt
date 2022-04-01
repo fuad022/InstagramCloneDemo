@@ -25,9 +25,8 @@ class FollowingFragment : Fragment() {
     }
 
     private fun initLikes() {
-        likesViewModel.mockLikesDataList.observe(viewLifecycleOwner) {
+        likesViewModel.mockFollowingLikesDataList.observe(viewLifecycleOwner) {
             likesAdapter.submitList(it.toMutableList())
-            Log.d("initLikes", it.toString())
         }
         binding.followingLikesRv.adapter = likesAdapter
     }
