@@ -13,6 +13,7 @@ import com.example.instagramclonedemo.databinding.FragmentSearchBinding
 import com.example.instagramclonedemo.ui.search.adapter.SearchPhotosAdapter
 import com.example.instagramclonedemo.ui.search.adapter.SearchTabsAdapter
 import com.example.instagramclonedemo.ui.search.viewmodel.SearchViewModel
+import com.example.instagramclonedemo.util.SpannedGridLayoutManager
 import com.example.instagramclonedemo.util.Util
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -62,6 +63,22 @@ class SearchFragment : Fragment() {
         searchViewModel.mockPhotosDataList.observe(viewLifecycleOwner) {
             searchPhotosAdapter.submitList(it.toMutableList())
         }
+
+        val manager = SpannedGridLayoutManager(
+            object : SpannedGridLayoutManager.GridSpanLookup {
+                override fun getSpanInfo(position: Int): SpannedGridLayoutManager.SpanInfo {
+                    return if (position % 12 == 1 || position % 12 == 6) {
+                        SpannedGridLayoutManager.SpanInfo(2, 2)
+                    } else {
+                        SpannedGridLayoutManager.SpanInfo(1, 1)
+                    }
+                }
+            },
+            3,
+            1f
+        )
+
+        binding.photosRv.layoutManager = manager
         binding.photosRv.adapter = searchPhotosAdapter
     }
 }

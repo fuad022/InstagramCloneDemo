@@ -36,8 +36,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:itemCount="11"
-                    tools:listitem="@layout/following_likes_rv_item" />
+                    tools:itemCount="1"
+                    tools:listitem="@layout/likes_nested_rv_item" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
