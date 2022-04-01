@@ -2,7 +2,6 @@ package com.example.instagramclonedemo.data.mocklist
 
 import com.example.instagramclonedemo.R
 import com.example.instagramclonedemo.data.model.*
-import com.example.instagramclonedemo.util.Util.getSpannableText
 
 object MockData {
 

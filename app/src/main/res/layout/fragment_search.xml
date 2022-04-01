@@ -8,17 +8,24 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         tools:context=".ui.search.SearchFragment">
 
         <androidx.core.widget.NestedScrollView
-            android:id="@+id/nasted_scroll"
+            android:id="@+id/nested_scroll"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:fillViewport="true"
             android:overScrollMode="never"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +33,11 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nested_layout"
                 android:layout_width="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:layout_height="match_parent">
 
                 <androidx.appcompat.widget.AppCompatEditText
@@ -36,10 +47,11 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/text_input_shape"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
                     android:drawableStart="@drawable/ic_search"
                     android:drawablePadding="10dp"
                     android:hint="Search"
-                    android:inputType="textMultiLine"
+                    android:inputType="textFilter"
                     android:maxLength="20"
                     android:maxLines="1"
                     android:minHeight="40dp"

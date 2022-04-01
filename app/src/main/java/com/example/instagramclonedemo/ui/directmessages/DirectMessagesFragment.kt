@@ -1,10 +1,13 @@
 package com.example.instagramclonedemo.ui.directmessages
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.navigation.fragment.findNavController
 import com.example.instagramclonedemo.databinding.FragmentDirectMessagesBinding
 import com.example.instagramclonedemo.ui.directmessages.adapter.DirectMessagesAdapter
@@ -20,9 +23,18 @@ class DirectMessagesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        hideSoftKeyboard()
         initBackBtn()
         observeMessageList()
         return binding.root
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private fun hideSoftKeyboard() {
+        binding.messagesRv.setOnTouchListener { view, motionEvent ->
+            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(view?.windowToken, 0)
+        }
     }
 
     private fun initBackBtn() {

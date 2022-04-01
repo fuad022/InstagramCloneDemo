@@ -97,9 +97,9 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="22dp"
             android:layout_marginTop="30dp"
+            android:fontFamily="@font/sf_pro_text_semobold"
             android:text="Log in with Facebook"
             android:textColor="@color/blue"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/sign_up_txt"
             app:layout_constraintTop_toBottomOf="@id/login_btn" />
 
@@ -107,8 +107,8 @@
             android:id="@+id/or_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_text_semobold"
             android:text="OR"
-            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/sign_up_txt"
             app:layout_constraintEnd_toEndOf="@id/fb_txt"
             app:layout_constraintStart_toStartOf="@id/fb_logo"
@@ -119,6 +119,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="90dp"
+            android:fontFamily="@font/sf_pro_text_regular"
             android:text="@string/create_account"
             app:layout_constraintEnd_toEndOf="@id/login_btn"
             app:layout_constraintStart_toStartOf="@id/login_btn"
@@ -129,6 +130,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/top_border_grey"
+            android:fontFamily="@font/sf_pro_text_regular"
             android:gravity="center"
             android:text="Instagram from Facebook"
             app:layout_constraintBottom_toBottomOf="parent" />

@@ -1,5 +1,6 @@
 package com.example.instagramclonedemo.ui.auth
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.text.Editable
@@ -33,6 +34,7 @@ class AuthLoginFragment : Fragment(), TextWatcher {
         }
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private fun init() {
         binding.loginBtn.isEnabled = false
         binding.login.addTextChangedListener(this)
@@ -41,6 +43,11 @@ class AuthLoginFragment : Fragment(), TextWatcher {
         binding.loginBtn.setOnClickListener {
             val action = AuthLoginFragmentDirections.actionAuthLoginFragmentToRootFragment()
             findNavController().navigate(action)
+        }
+
+        binding.authLogin.setOnTouchListener { view, motionEvent ->
+            val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(view?.windowToken, 0)
         }
     }
 
