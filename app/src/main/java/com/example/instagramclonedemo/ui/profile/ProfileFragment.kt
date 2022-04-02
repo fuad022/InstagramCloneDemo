@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.findNavController
@@ -15,6 +16,8 @@ import com.example.instagramclonedemo.databinding.FragmentProfileBinding
 import com.example.instagramclonedemo.ui.profile.adapter.ProfileStoriesAdapter
 import com.example.instagramclonedemo.ui.profile.adapter.ViewPagerAdapter
 import com.example.instagramclonedemo.ui.profile.viewmodel.ProfileViewModel
+import com.example.instagramclonedemo.util.Util
+import com.example.instagramclonedemo.util.Util.backPressed
 import com.google.android.material.tabs.TabLayoutMediator
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -27,6 +30,7 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        backPressed(requireActivity())
         initMenuBtn()
         initEditBtn()
         observeStoriesList()

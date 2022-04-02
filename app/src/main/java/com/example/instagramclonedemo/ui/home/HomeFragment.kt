@@ -5,11 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.navigation.fragment.findNavController
+import com.example.instagramclonedemo.R
 import com.example.instagramclonedemo.databinding.FragmentHomeBinding
 import com.example.instagramclonedemo.ui.home.adapter.HomePostAdapter
 import com.example.instagramclonedemo.ui.home.adapter.HomeStoriesAdapter
 import com.example.instagramclonedemo.ui.home.viewmodel.HomeViewModel
+import com.example.instagramclonedemo.util.Util
+import com.example.instagramclonedemo.util.Util.backPressed
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
@@ -22,6 +26,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        backPressed(requireActivity())
         initMessageBtn()
         observeStoriesList()
         observePostsList()

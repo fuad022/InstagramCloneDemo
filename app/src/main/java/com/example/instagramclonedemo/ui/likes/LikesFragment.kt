@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.recyclerview.widget.RecyclerView
 import com.example.instagramclonedemo.R
 import com.example.instagramclonedemo.databinding.FragmentLikesBinding
 import com.example.instagramclonedemo.ui.likes.adapter.ViewPagerAdapter
+import com.example.instagramclonedemo.util.Util
+import com.example.instagramclonedemo.util.Util.backPressed
 import com.google.android.material.tabs.TabLayoutMediator
 
 class LikesFragment : Fragment() {
@@ -18,6 +21,7 @@ class LikesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        backPressed(requireActivity())
         init()
         return binding.root
     }

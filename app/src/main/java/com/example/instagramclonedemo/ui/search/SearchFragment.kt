@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import androidx.activity.OnBackPressedCallback
 import androidx.navigation.fragment.findNavController
 import com.example.instagramclonedemo.databinding.FragmentSearchBinding
 import com.example.instagramclonedemo.ui.search.adapter.SearchPhotosAdapter
@@ -15,6 +16,7 @@ import com.example.instagramclonedemo.ui.search.adapter.SearchTabsAdapter
 import com.example.instagramclonedemo.ui.search.viewmodel.SearchViewModel
 import com.example.instagramclonedemo.util.SpannedGridLayoutManager
 import com.example.instagramclonedemo.util.Util
+import com.example.instagramclonedemo.util.Util.backPressed
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SearchFragment : Fragment() {
@@ -27,6 +29,7 @@ class SearchFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        backPressed(requireActivity())
         hideSoftKeyboard()
         setupTabAdapter()
         observePhotosList()

@@ -4,7 +4,6 @@ import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.util.TypedValue
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -51,7 +50,6 @@ class RootFragment : Fragment() {
             .apply(
                 RequestOptions.circleCropTransform()
             ).into(object :
-//                CustomTarget<Bitmap>(dpToPx(24), dpToPx(24)) {
                 CustomTarget<Bitmap>(dpToPx(24, requireContext()), dpToPx(24, requireContext())) {
                 override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
                     menuItem?.icon = BitmapDrawable(resources, resource)
@@ -71,21 +69,10 @@ class RootFragment : Fragment() {
     }
 
     private fun hideBottomNav() {
-//        binding.bottomNav.visibility = View.GONE
         binding.bottomNav.isVisible = false
     }
 
     private fun showBottomNav() {
-//        binding.bottomNav.visibility = View.VISIBLE
         binding.bottomNav.isVisible = true
     }
-
-//    fun dpToPx(dp: Int): Int {
-//        val r = requireContext().resources
-//        return TypedValue.applyDimension(
-//            TypedValue.COMPLEX_UNIT_DIP,
-//            dp.toFloat(),
-//            r.displayMetrics
-//        ).toInt()
-//    }
 }

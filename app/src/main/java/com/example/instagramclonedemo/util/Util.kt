@@ -1,15 +1,18 @@
 package com.example.instagramclonedemo.util
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.util.TypedValue
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.activity.OnBackPressedCallback
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.text.HtmlCompat
 import androidx.core.text.bold
+import androidx.fragment.app.FragmentActivity
 
 object Util {
 
@@ -30,5 +33,14 @@ object Util {
             dp.toFloat(),
             r.displayMetrics
         ).toInt()
+    }
+
+    fun backPressed(fragmentActivity: FragmentActivity) {
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                fragmentActivity.finish()
+            }
+        }
+        fragmentActivity.onBackPressedDispatcher.addCallback(callback)
     }
 }

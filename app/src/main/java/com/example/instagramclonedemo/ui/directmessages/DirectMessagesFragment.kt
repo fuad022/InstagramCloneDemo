@@ -12,12 +12,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import androidx.activity.OnBackPressedCallback
 import androidx.navigation.fragment.findNavController
 import com.example.instagramclonedemo.R
 import com.example.instagramclonedemo.data.model.DirectMessagesModel
 import com.example.instagramclonedemo.databinding.FragmentDirectMessagesBinding
 import com.example.instagramclonedemo.ui.directmessages.adapter.DirectMessagesAdapter
 import com.example.instagramclonedemo.ui.directmessages.viewmodel.DirectMessagesViewModel
+import com.example.instagramclonedemo.ui.igtv.IgtvFragmentDirections
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DirectMessagesFragment : Fragment() {
@@ -30,11 +32,21 @@ class DirectMessagesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        onBackPressed()
         binding.search.setupClearButtonWithAction()
         hideSoftKeyboard()
         initBackBtn()
         observeMessageList()
         return binding.root
+    }
+
+    private fun onBackPressed() {
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                findNavController().navigate(DirectMessagesFragmentDirections.actionDirectMessagesFragmentToHome())
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(callback)
     }
 
     @SuppressLint("ClickableViewAccessibility")
