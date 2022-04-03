@@ -191,12 +191,6 @@ object MockData {
         return list
     }
 
-//    fun getFollowingLikesList(): List<LikesModel> {
-//        val list: ArrayList<LikesModel> = arrayListOf()
-//        list.add(LikesModel(null, getThisWeekLikesNestedList()))
-//        return list
-//    }
-
     fun getFollowingLikesList(): List<LikesNestedModel> {
         val list: ArrayList<LikesNestedModel> = arrayListOf()
         list.add(
@@ -208,9 +202,51 @@ object MockData {
         )
         list.add(
             LikesNestedModel(
-                R.drawable.photo_4,
-                "<b>craig_love</b> mentioned you in a comment: exactly... <font color='#bebec0'>2d</font>",
+                R.drawable.photo_1,
+                "<b>martini_rond</b> mentioned <b>karenne</b> in a comment: Good!!! <font color='#bebec0'>2h</font>",
                 R.drawable.likes_img_4
+            )
+        )
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_7,
+                "<b>kiero_d</b> started following <b>craig_love</b> <font color='#bebec0'>3h</font>",
+                null
+            )
+        )
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_2,
+                "<b>karennne</b> liked your photo. <font color='#bebec0'>1d</font>",
+                R.drawable.likes_img_1
+            )
+        )
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_4,
+                "<b>mis_poter</b> started following <b>jackjohn</b> <font color='#bebec0'>2d</font>",
+                null
+            )
+        )
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_4,
+                "<b>martini_rond</b> liked <b>karennne</b> photo. <font color='#bebec0'>1h</font>",
+                R.drawable.likes_img_4
+            )
+        )
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_5,
+                "<b>maxjacobson</b> liked <b>craig_love's</b> comment: <font color='#3897f0'>@maxjacobson</font> Nice! <font color='#bebec0'>3d</font>",
+                R.drawable.likes_img_5
+            )
+        )
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_6,
+                "<b>kiero_d</b> liked <b>joshua_l's</b> comment: <font color='#3897f0'>@maxjacobson</font> Fine.... <font color='#bebec0'>1h</font>",
+                R.drawable.likes_img_6
             )
         )
         return list
