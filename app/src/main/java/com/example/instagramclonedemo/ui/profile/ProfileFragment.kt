@@ -2,6 +2,7 @@ package com.example.instagramclonedemo.ui.profile
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +10,12 @@ import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.instagramclonedemo.R
 import com.example.instagramclonedemo.databinding.FragmentProfileBinding
+import com.example.instagramclonedemo.root.RootFragment
 import com.example.instagramclonedemo.ui.profile.adapter.ProfileStoriesAdapter
 import com.example.instagramclonedemo.ui.profile.adapter.ViewPagerAdapter
 import com.example.instagramclonedemo.ui.profile.viewmodel.ProfileViewModel
@@ -38,6 +41,11 @@ class ProfileFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
+
     private fun initEditBtn() {
         binding.editBtn.setOnClickListener {
             val action = ProfileFragmentDirections.actionProfileToProfileEditFragment()
@@ -46,24 +54,31 @@ class ProfileFragment : Fragment() {
     }
 
     private fun initMenuBtn() {
+        val p = parentFragment as NavHostFragment
+        val a = p.parentFragment as RootFragment
         binding.menu.setOnClickListener {
-            if (binding.drawerLayout.isDrawerOpen(GravityCompat.END))
-                binding.drawerLayout.closeDrawer(GravityCompat.END)
-            binding.drawerLayout.openDrawer(GravityCompat.END)
+            if (a.getDrawerLayout().isDrawerOpen(GravityCompat.END))
+                a.getDrawerLayout().closeDrawer(GravityCompat.END)
+            a.getDrawerLayout().openDrawer(GravityCompat.END)
             setupDrawerAnimation()
         }
     }
 
     private fun setupDrawerAnimation() {
-        binding.drawerLayout.elevation = 0f
-        binding.drawerLayout.setScrimColor(Color.TRANSPARENT)
-        binding.drawerLayout.addDrawerListener(object : DrawerLayout.SimpleDrawerListener() {
-            override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
-                val slideX = drawerView.width * slideOffset
-                binding.constraint.translationX = -slideX
+        val p = parentFragment as NavHostFragment
+        val a = p.parentFragment as RootFragment
+        a.getDrawerLayout().apply {
+            elevation = 0f
+            setScrimColor(Color.TRANSPARENT)
+            addDrawerListener(object : DrawerLayout.SimpleDrawerListener() {
+                override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
+                    val slideX = drawerView.width * slideOffset
+                    binding.constraint.translationX = -slideX
+                    a.getBottomNav().translationX = -slideX
+                }
             }
+            )
         }
-        )
     }
 
     private fun observeStoriesList() {

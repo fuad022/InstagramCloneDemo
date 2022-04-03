@@ -35,6 +35,9 @@ class RootFragment : Fragment() {
         init()
     }
 
+    fun getDrawerLayout() = binding.drawerLayout
+    fun getBottomNav() = binding.bottomNav
+
     private fun init() {
         val navView: BottomNavigationView = binding.bottomNav
 
