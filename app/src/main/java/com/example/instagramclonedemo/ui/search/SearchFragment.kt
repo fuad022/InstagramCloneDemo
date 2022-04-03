@@ -8,8 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import android.widget.LinearLayout
 import androidx.activity.OnBackPressedCallback
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.instagramclonedemo.databinding.FragmentSearchBinding
 import com.example.instagramclonedemo.ui.search.adapter.SearchPhotosAdapter
 import com.example.instagramclonedemo.ui.search.adapter.SearchTabsAdapter
@@ -65,6 +67,10 @@ class SearchFragment : Fragment() {
     private fun observePhotosList() {
         searchViewModel.mockPhotosDataList.observe(viewLifecycleOwner) {
             searchPhotosAdapter.submitList(it.toMutableList())
+            val params: ViewGroup.LayoutParams = binding.photosRv.getLayoutParams()
+            params.height = 180 * it.size
+            binding.photosRv.layoutParams = params
+
         }
 
         val manager = SpannedGridLayoutManager(
