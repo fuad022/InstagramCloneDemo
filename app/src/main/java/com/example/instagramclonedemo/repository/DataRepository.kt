@@ -22,7 +22,7 @@ class DataRepository {
     fun getRepoSearchPhotosList(): List<SearchModel> = getSearchPhotosList()
 
     fun getRepoYouLikesList(): List<LikesModel> = getYouLikesList()
-    fun getRepoFollowingLikesList(): List<LikesModel> = getFollowingLikesList()
+    fun getRepoFollowingLikesList(): List<LikesNestedModel> = getFollowingLikesList()
 
     fun getRepoProfileStoriesList(): List<ProfileModel> = getProfileStoriesList()
     fun getRepoProfilePhotosList(): List<ProfileModel> = getProfilePhotosList()

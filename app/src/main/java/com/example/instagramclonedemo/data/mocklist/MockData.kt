@@ -191,9 +191,28 @@ object MockData {
         return list
     }
 
-    fun getFollowingLikesList(): List<LikesModel> {
-        val list: ArrayList<LikesModel> = arrayListOf()
-        list.add(LikesModel(null, getThisWeekLikesNestedList()))
+//    fun getFollowingLikesList(): List<LikesModel> {
+//        val list: ArrayList<LikesModel> = arrayListOf()
+//        list.add(LikesModel(null, getThisWeekLikesNestedList()))
+//        return list
+//    }
+
+    fun getFollowingLikesList(): List<LikesNestedModel> {
+        val list: ArrayList<LikesNestedModel> = arrayListOf()
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_3,
+                "<b>craig_love</b> mentioned you in a comment: exactly... <font color='#bebec0'>2d</font>",
+                R.drawable.likes_img_3
+            )
+        )
+        list.add(
+            LikesNestedModel(
+                R.drawable.photo_4,
+                "<b>craig_love</b> mentioned you in a comment: exactly... <font color='#bebec0'>2d</font>",
+                R.drawable.likes_img_4
+            )
+        )
         return list
     }
 
