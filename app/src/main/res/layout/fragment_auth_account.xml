@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/sf_pro_text_semobold"
-            android:text="jacob_w"
+            android:text="@string/acc_name"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@id/acc_img"
@@ -57,7 +53,7 @@
             android:background="@drawable/login_btn_background"
             android:fontFamily="@font/sf_pro_text_semobold"
             android:paddingVertical="9dp"
-            android:text="Log in"
+            android:text="@string/login_btn"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp"
@@ -71,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30sp"
             android:fontFamily="@font/sf_pro_text_semobold"
-            android:text="Switch accounts"
+            android:text="@string/switch_acc"
             android:textColor="@color/blue"
             app:layout_constraintEnd_toEndOf="@id/login_btn"
             app:layout_constraintStart_toStartOf="@id/login_btn"

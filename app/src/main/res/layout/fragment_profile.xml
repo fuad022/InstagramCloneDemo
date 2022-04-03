@@ -3,11 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint"
         android:layout_width="match_parent"
@@ -43,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/sf_pro_text_semobold"
-                    android:text="jacob_w"
+                    android:text="@string/acc_name"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -117,7 +112,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20sp"
                     android:fontFamily="@font/sf_pro_text_semobold"
-                    android:text="54"
+                    android:text="@string/post_count"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toTopOf="@id/post_txt"
@@ -130,7 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sf_pro_text_regular"
-                    android:text="Posts"
+                    android:text="@string/posts_txt"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     app:layout_constraintEnd_toEndOf="@id/post_count"
@@ -142,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sf_pro_text_semobold"
-                    android:text="834"
+                    android:text="@string/followers_count"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@id/post_count"
@@ -155,7 +150,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sf_pro_text_regular"
-                    android:text="Followers"
+                    android:text="@string/followers_txt"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     app:layout_constraintEnd_toEndOf="@id/followers_count"
@@ -167,7 +162,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sf_pro_text_semobold"
-                    android:text="162"
+                    android:text="@string/following_count"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@id/followers_count"
@@ -180,7 +175,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/sf_pro_text_regular"
-                    android:text="Following"
+                    android:text="@string/following_txt"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     app:layout_constraintEnd_toEndOf="@id/following_count"
@@ -193,7 +188,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/sf_pro_text_semobold"
-                    android:text="Jacob West"
+                    android:text="@string/profile_name"
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     app:layout_constraintStart_toStartOf="@id/oval"
@@ -219,7 +214,7 @@
                     android:layout_marginTop="12dp"
                     android:background="@drawable/button"
                     android:fontFamily="@font/sf_pro_text_semobold"
-                    android:text="Edit Profile"
+                    android:text="@string/edit_btn"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="15sp"
