@@ -53,7 +53,7 @@
             android:background="@drawable/login_btn_background"
             android:fontFamily="@font/sf_pro_text_semobold"
             android:paddingVertical="9dp"
-            android:text="@string/login_btn"
+            android:text="@string/login"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="16sp"

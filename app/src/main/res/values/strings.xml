@@ -7,22 +7,15 @@
     <string name="profile">Profile</string>
     <string name="add_image">Add image</string>
 
-    <string name="test_text">
-    <![CDATA[
-    <p> <b>Title</b> content content content content content content </p>
-    ]]>
-    </string>
-
     <string name="create_account">Don\'t have an account? <font color='#3897f0'>Sign up.</font></string>
     <string name="auth_account">Don\'t have an account? <b><font color='#FF000000'>Sign up.</font></b></string>
     <string name="bio_str">Digital goodies designer <font color='#05386b'>@pixsellz</font> Everything is designed</string>
     <string name="acc_name">jacob_w</string>
-    <string name="login_btn">Log in</string>
+    <string name="login">Log in</string>
     <string name="switch_acc">Switch accounts</string>
     <string name="auth_login">Login</string>
     <string name="auth_pass">Password</string>
     <string name="forgot_pass">Forgot password?</string>
-    <string name="auth_log_in">Log in</string>
     <string name="fb_log_in">Log in with Facebook</string>
     <string name="auth_or">OR</string>
     <string name="footer_txt">Instagram from Facebook</string>
@@ -33,31 +26,23 @@
     <string name="following_count">162</string>
     <string name="following_txt">Following</string>
     <string name="profile_name">Jacob West</string>
-    <string name="edit_btn">Edit Profile</string>
+    <string name="edit">Edit Profile</string>
     <string name="cancel">Cancel</string>
-    <string name="edit_profile">Edit Profile</string>
     <string name="done">Done</string>
     <string name="change_txt">Change Profile Photo</string>
-    <string name="name_txt">Name</string>
-    <string name="hint_name">Name</string>
+    <string name="name">Name</string>
     <string name="profile_name_edit">Jacob West</string>
-    <string name="username_txt">Username</string>
-    <string name="profile_username">Username</string>
-    <string name="website_txt">Website</string>
-    <string name="profile_website">Website</string>
-    <string name="bio_txt">Bio</string>
-    <string name="profile_bio">Bio</string>
+    <string name="username">Username</string>
+    <string name="website">Website</string>
+    <string name="bio">Bio</string>
     <string name="switch_txt">Switch to Professional Account</string>
     <string name="private_txt">Private Information</string>
     <string name="email_txt">Email</string>
-    <string name="hint_email">Name</string>
     <string name="email">jacob.west@gmail.com</string>
-    <string name="phone_txt">Phone</string>
-    <string name="hint_phone">Phone</string>
+    <string name="phone">Phone</string>
     <string name="edit_phone_txt">+1 202 555 0147</string>
     <string name="gender_txt">Gender</string>
-    <string name="hint_gender">Male</string>
-    <string name="edit_profile_gender_txt">Male</string>
+    <string name="gender">Male</string>
     <string name="root_settings_txt">Settings</string>
     <string name="message_txt">Have a nice day, bro!</string>
     <string name="point">.</string>

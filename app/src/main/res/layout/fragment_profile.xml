@@ -214,7 +214,7 @@
                     android:layout_marginTop="12dp"
                     android:background="@drawable/button"
                     android:fontFamily="@font/sf_pro_text_semobold"
-                    android:text="@string/edit_btn"
+                    android:text="@string/edit"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="15sp"
