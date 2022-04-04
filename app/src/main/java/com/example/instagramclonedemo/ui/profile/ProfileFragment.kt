@@ -41,11 +41,6 @@ class ProfileFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-    }
-
     private fun initEditBtn() {
         binding.editBtn.setOnClickListener {
             val action = ProfileFragmentDirections.actionProfileToProfileEditFragment()
@@ -54,27 +49,27 @@ class ProfileFragment : Fragment() {
     }
 
     private fun initMenuBtn() {
-        val p = parentFragment as NavHostFragment
-        val a = p.parentFragment as RootFragment
+        val navHostFragment = parentFragment as NavHostFragment
+        val rootFragment = navHostFragment.parentFragment as RootFragment
         binding.menu.setOnClickListener {
-            if (a.getDrawerLayout().isDrawerOpen(GravityCompat.END))
-                a.getDrawerLayout().closeDrawer(GravityCompat.END)
-            a.getDrawerLayout().openDrawer(GravityCompat.END)
+            if (rootFragment.getDrawerLayout().isDrawerOpen(GravityCompat.END))
+                rootFragment.getDrawerLayout().closeDrawer(GravityCompat.END)
+            rootFragment.getDrawerLayout().openDrawer(GravityCompat.END)
             setupDrawerAnimation()
         }
     }
 
     private fun setupDrawerAnimation() {
-        val p = parentFragment as NavHostFragment
-        val a = p.parentFragment as RootFragment
-        a.getDrawerLayout().apply {
+        val navHostFragment = parentFragment as NavHostFragment
+        val rootFragment = navHostFragment.parentFragment as RootFragment
+        rootFragment.getDrawerLayout().apply {
             elevation = 0f
             setScrimColor(Color.TRANSPARENT)
             addDrawerListener(object : DrawerLayout.SimpleDrawerListener() {
                 override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
                     val slideX = drawerView.width * slideOffset
                     binding.constraint.translationX = -slideX
-                    a.getBottomNav().translationX = -slideX
+                    rootFragment.getBottomNav().translationX = -slideX
                 }
             }
             )
