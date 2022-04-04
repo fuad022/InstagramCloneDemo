@@ -16,7 +16,7 @@ class SearchTabsAdapter : ListAdapter<SearchModel, SearchTabsAdapter.ItemHolder>
                 if (m.icon != null) binding.tabBtn.setCompoundDrawablesWithIntrinsicBounds(m.icon, 0, 0, 0)
                 binding.tabBtn.text = m.title
                 binding.tabBtn.setOnClickListener {
-                    m.let { user -> setOnItemClick?.invoke(user) }
+                    m.let { searchModel -> setOnItemClick?.invoke(searchModel) }
                 }
             }
         }
